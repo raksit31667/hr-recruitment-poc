@@ -1,12 +1,12 @@
 <mat-sidenav-container class="sidenav">
   <mat-sidenav mode="side" opened>
     <h2>Filter by</h2>
-    <field-appender></field-appender>
-    <field-appender></field-appender>
-    <field-appender></field-appender>
-    <field-appender></field-appender>
+    <field-appender (append)="appendInputFilter()"></field-appender>
+    <field-appender (append)="appendInputFilter()"></field-appender>
+    <field-appender (append)="appendInputFilter()"></field-appender>
+    <field-appender (append)="appendInputFilter()"></field-appender>
   </mat-sidenav>
   <mat-sidenav-content>
-    <input-filter-list></input-filter-list>
+    <input-filter-list #inputFilterList></input-filter-list>
   </mat-sidenav-content>
 </mat-sidenav-container>

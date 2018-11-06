@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'field-appender',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FieldAppenderComponent implements OnInit {
 
+  @Output() append = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onClickAppend() {
+    this.append.emit();
+  }
 }

@@ -21,6 +21,7 @@ import { InputFilterListComponent } from './components/input-filter-list/input-f
     MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [ InputFilterComponent ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

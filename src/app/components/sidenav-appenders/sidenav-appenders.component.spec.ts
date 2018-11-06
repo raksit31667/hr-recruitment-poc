@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MaterialModule } from '../../material.module';
 import { SidenavAppendersComponent } from './sidenav-appenders.component';
 import { FieldAppenderComponent } from '../field-appender/field-appender.component';
+import { InputFilterListComponent } from '../input-filter-list/input-filter-list.component';
 
 describe('SidenavAppendersComponent', () => {
   let component: SidenavAppendersComponent;
@@ -10,7 +11,10 @@ describe('SidenavAppendersComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ MaterialModule ],
-      declarations: [ SidenavAppendersComponent, FieldAppenderComponent ]
+      declarations: [
+        SidenavAppendersComponent,
+        FieldAppenderComponent,
+        InputFilterListComponent ]
     })
     .compileComponents();
   }));

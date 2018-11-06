@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FieldAppenderComponent } from './components/field-appender/field-appender.component';
 import { SidenavAppendersComponent } from './components/sidenav-appenders/sidenav-appenders.component';
 import { InputFilterComponent } from './components/input-filter/input-filter.component';
+import { InputFilterListComponent } from './components/input-filter-list/input-filter-list.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { InputFilterComponent } from './components/input-filter/input-filter.com
     FieldAppenderComponent,
     SidenavAppendersComponent,
     InputFilterComponent,
+    InputFilterListComponent,
   ],
   imports: [
     BrowserModule,

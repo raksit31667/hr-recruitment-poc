@@ -7,11 +7,10 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./input-filter.component.css'],
 })
 export class InputFilterComponent {
-  addressForm = this.fb.group({
+  filterForm = this.fb.group({
     company: null,
     state: null,
     postalCode: null,
-    shipping: ['free', Validators.required]
   });
 
   hasUnitNumber = false;

@@ -1,6 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule, MatCardModule, MatIconModule } from '@angular/material';
+import { MaterialModule } from '../../material.module';
 import { SidenavAppendersComponent } from './sidenav-appenders.component';
 import { FieldAppenderComponent } from '../field-appender/field-appender.component';
 
@@ -10,7 +9,7 @@ describe('SidenavAppendersComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ MatSidenavModule, MatCardModule, MatIconModule, BrowserAnimationsModule ],
+      imports: [ MaterialModule ],
       declarations: [ SidenavAppendersComponent, FieldAppenderComponent ]
     })
     .compileComponents();

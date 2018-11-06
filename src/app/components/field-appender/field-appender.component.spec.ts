@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatCardModule, MatIconModule } from '@angular/material';
+import { MaterialModule } from '../../material.module';
 import { FieldAppenderComponent } from './field-appender.component';
 
 describe('FieldAppenderComponent', () => {
@@ -8,10 +8,7 @@ describe('FieldAppenderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        MatIconModule
-      ],
+      imports: [ MaterialModule ],
       declarations: [ FieldAppenderComponent ]
     })
     .compileComponents();

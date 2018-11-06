@@ -4,7 +4,11 @@ import {
   MatCardModule,
   MatButtonModule,
   MatIconModule,
-  MatSidenavModule } from '@angular/material';
+  MatSidenavModule,
+  MatInputModule,
+  MatSelectModule } from '@angular/material';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [
@@ -12,7 +16,10 @@ import {
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatInputModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   declarations: []
 })

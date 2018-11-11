@@ -1,10 +1,10 @@
 <mat-sidenav-container class="sidenav">
   <mat-sidenav mode="side" opened>
     <h2>Filter by</h2>
-    <field-appender (append)="onAppendInputFilter('firstName')"></field-appender>
-    <field-appender (append)="onAppendInputFilter('lastName')"></field-appender>
-    <field-appender (append)="onAppendInputFilter('candidateStatus')"></field-appender>
-    <field-appender (append)="onAppendInputFilter()"></field-appender>
+    <field-appender placeholder="First name" (append)="onAppendInputFilter('firstName')"></field-appender>
+    <field-appender placeholder="Last name" (append)="onAppendInputFilter('lastName')"></field-appender>
+    <field-appender placeholder="Candidate Status" (append)="onAppendInputFilter('candidateStatus')"></field-appender>
+    <field-appender placeholder="Empty" (append)="onAppendInputFilter()"></field-appender>
   </mat-sidenav>
   <mat-sidenav-content>
     <input-filter-list #inputFilterList></input-filter-list>

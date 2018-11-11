@@ -1,0 +1,18 @@
+export enum University {
+CU = 'Chulalongkorn University',
+TU = 'Thammasat University',
+KU = 'Kasetsart University',
+AU = 'Assumption University',
+MUIC = 'Mahidol University International College',
+BUU = 'Burapha University',
+CMU = 'Chiang Mai University',
+CRAS = 'Chulabhorn Royal Academy of Science',
+KKU = 'Khon Kaen University',
+KMITL = 'King Mongkut\'s Institute of Technology Ladkrabang',
+KMUTNB = 'King Mongkut\'s University of Technology North Bangkok',
+KMUTT = 'King Mongkut\'s University of Technology Thonburi',
+MFU = 'Mae Fah Luang University',
+MCU = 'Mahachulalongkornrajavidyalaya University',
+MBU = 'Mahamakut Buddhist University',
+MU = 'Mahidol University',
+}

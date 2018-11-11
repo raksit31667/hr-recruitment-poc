@@ -4,7 +4,8 @@
     <field-appender placeholder="First name" (append)="onAppendInputFilter('firstName')"></field-appender>
     <field-appender placeholder="Last name" (append)="onAppendInputFilter('lastName')"></field-appender>
     <field-appender placeholder="Candidate Status" (append)="onAppendInputFilter('candidateStatus')"></field-appender>
-    <field-appender placeholder="Empty" (append)="onAppendInputFilter()"></field-appender>
+    <field-appender placeholder="University" (append)="onAppendInputFilter('university')"></field-appender>
+    <field-appender placeholder="Date Shortlisted to EM-HR" (append)="onAppendInputFilter('shortlistDate')"></field-appender>
   </mat-sidenav>
   <mat-sidenav-content>
     <input-filter-list #inputFilterList></input-filter-list>

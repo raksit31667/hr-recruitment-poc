@@ -19,6 +19,8 @@ export class InputFilterListComponent {
     firstName: null,
     lastName: null,
     candidateStatus: null,
+    university: null,
+    shortlistDate: null
   });
 
   candidates: Candidate[] = [];

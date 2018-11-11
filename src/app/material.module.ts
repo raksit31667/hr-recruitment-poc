@@ -7,6 +7,8 @@ import {
   MatSidenavModule,
   MatInputModule,
   MatSelectModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
   MatPaginatorModule,
   MatSortModule,
   MatTableModule } from '@angular/material';
@@ -22,6 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSidenavModule,
     MatInputModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,

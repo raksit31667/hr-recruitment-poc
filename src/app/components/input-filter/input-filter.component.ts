@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { CandidateStatus } from 'src/app/models/candidate-status';
+import { University } from 'src/app/models/university';
 
 @Component({
   selector: 'input-filter',
@@ -10,6 +11,7 @@ import { CandidateStatus } from 'src/app/models/candidate-status';
 export class InputFilterComponent implements OnInit {
 
   candidateStatuses = [];
+  universities = [];
 
   @Input() filterForm: FormGroup;
   @Input() type: String;
@@ -18,5 +20,6 @@ export class InputFilterComponent implements OnInit {
 
   ngOnInit() {
     this.candidateStatuses = Object.keys(CandidateStatus).map(key => CandidateStatus[key]);
+    this.universities = Object.keys(University).map(key => University[key]);
   }
 }

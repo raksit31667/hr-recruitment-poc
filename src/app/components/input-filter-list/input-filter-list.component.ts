@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { InputFilterComponent } from '../input-filter/input-filter.component';
 
 @Component({
   selector: 'input-filter-list',
@@ -7,6 +8,9 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./input-filter-list.component.css'],
 })
 export class InputFilterListComponent {
+
+  @ViewChild('inputFilterPlaceholder') inputFilterPlaceholder;
+
   filterForm = this.formBuilder.group({
     company: null,
     state: null,
@@ -75,9 +79,15 @@ export class InputFilterListComponent {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private componentFactoryResolver: ComponentFactoryResolver, private formBuilder: FormBuilder) {}
 
   onSubmit() {
     alert('Thanks!');
+  }
+
+  appendInputFilter() {
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(InputFilterComponent);
+    const viewContainerRef = this.inputFilterPlaceholder.viewContainerRef;
+    viewContainerRef.createComponent(componentFactory);
   }
 }

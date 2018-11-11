@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { FilterFormValue } from '../models/filter-form-value';
 import { Observable, of } from 'rxjs';
 import { Candidate } from '../models/candidate';
-import { CANDIDATES } from '../models/mock-candidates';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CandidateService {
 
-  constructor() { }
+  readonly CANDIDATES_URL = 'api/candidates/';
+
+  constructor(private http: HttpClient) { }
 
   public getQueryParameter(filterFormValue: FilterFormValue): string {
 
@@ -25,6 +27,6 @@ export class CandidateService {
   }
 
   public getCandidates(queryParameter: string): Observable<Candidate[]> {
-    return of(CANDIDATES);
+    return this.http.get<Candidate[]>(`${this.CANDIDATES_URL}/${queryParameter}`);
   }
 }

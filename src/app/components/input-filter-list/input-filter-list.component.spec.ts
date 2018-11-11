@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MaterialModule } from '../../material.module';
-
+import { HttpClientModule } from '@angular/common/http';
 import { InputFilterListComponent } from './input-filter-list.component';
 
 describe('InputFilterListComponent', () => {
@@ -9,7 +9,7 @@ describe('InputFilterListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ MaterialModule ],
+      imports: [ MaterialModule, HttpClientModule ],
       declarations: [ InputFilterListComponent ]
     })
     .compileComponents();

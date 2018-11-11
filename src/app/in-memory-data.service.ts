@@ -8,8 +8,6 @@ import { CandidateStatus } from './models/candidate-status';
 })
 export class InMemoryDataService implements InMemoryDbService {
 
-  constructor() { }
-
   createDb() {
     const candidates: Candidate[] = [
       { firstName: 'John', lastName: 'Doe', candidateStatus: CandidateStatus.NOT_PASS },

@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { InputFilterComponent } from '../input-filter/input-filter.component';
 import { InputFilterListPlaceholderDirective } from './input-filter-list-placeholder.directive';
 import { CandidateService } from '../../services/candidate.service';
+import { Candidate } from 'src/app/models/candidate';
 
 @Component({
   selector: 'input-filter-list',

@@ -9,7 +9,7 @@ import { Candidate } from '../models/candidate';
 })
 export class CandidateService {
 
-  readonly CANDIDATES_URL = 'api/candidates/';
+  readonly CANDIDATES_URL = 'api/candidates';
 
   constructor(private http: HttpClient) { }
 
@@ -23,10 +23,10 @@ export class CandidateService {
       }
     });
 
-    return requestList.join('&');
+    return `?${requestList.join('&')}`;
   }
 
   public getCandidates(queryParameter: string): Observable<Candidate[]> {
-    return this.http.get<Candidate[]>(`${this.CANDIDATES_URL}/${queryParameter}`);
+    return this.http.get<Candidate[]>(`${this.CANDIDATES_URL}${queryParameter}`);
   }
 }

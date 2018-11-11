@@ -40,7 +40,7 @@ describe('CandidateService', () => {
 
       const requestUrl = service.getQueryParameter(filterFormValue);
 
-      expect(requestUrl).toEqual('firstName=John&lastName=Doe');
+      expect(requestUrl).toEqual('?firstName=John&lastName=Doe');
     });
   });
 
@@ -53,11 +53,11 @@ describe('CandidateService', () => {
         { firstName: 'John', lastName: 'Doraemon', candidateStatus: CandidateStatus.NOT_PASS },
       ];
 
-      service.getCandidates('').subscribe(candidates => {
+      service.getCandidates('?lastName=Doe').subscribe(candidates => {
         expect(mockCandidates).toEqual(candidates);
       });
 
-      const req = httpMock.expectOne(`${service.CANDIDATES_URL}/`);
+      const req = httpMock.expectOne(`${service.CANDIDATES_URL}?lastName=Doe`);
       expect(req.request.method).toBe('GET');
       req.flush(mockCandidates);
     });

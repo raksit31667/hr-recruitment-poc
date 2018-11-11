@@ -8,7 +8,7 @@ export class CandidateService {
 
   constructor() { }
 
-  generateRequestUrl(filterFormValue: FilterFormValue): string {
+  public getQueryParameter(filterFormValue: FilterFormValue): string {
 
     const requestList = [];
 

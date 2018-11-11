@@ -27,7 +27,7 @@ describe('CandidateService', () => {
       candidateStatus: null
     };
 
-    const requestUrl = service.generateRequestUrl(filterFormValue);
+    const requestUrl = service.getQueryParameter(filterFormValue);
 
     expect(requestUrl).toEqual('firstName=John&lastName=Doe');
   });

@@ -18,8 +18,8 @@
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
         <mat-select placeholder="Candidate Status" formControlName="candidateStatus">
-          <mat-option *ngFor="let state of states" [value]="state.abbreviation">
-            {{ state.name }}
+          <mat-option *ngFor="let status of candidateStatuses" [value]="status">
+            {{ status }}
           </mat-option>
         </mat-select>
       </mat-form-field>

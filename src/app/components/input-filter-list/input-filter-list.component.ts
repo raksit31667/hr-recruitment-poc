@@ -2,6 +2,7 @@ import { Component, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { InputFilterComponent } from '../input-filter/input-filter.component';
 import { InputFilterListPlaceholderDirective } from './input-filter-list-placeholder.directive';
+import { CandidateService } from '../../services/candidate.service';
 
 @Component({
   selector: 'input-filter-list',
@@ -19,10 +20,16 @@ export class InputFilterListComponent {
     candidateStatus: null,
   });
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver, private formBuilder: FormBuilder) {}
+  candidates: Candidate[];
+
+  constructor(private componentFactoryResolver: ComponentFactoryResolver,
+    private formBuilder: FormBuilder,
+    private candidateService: CandidateService) {}
 
   onSubmit() {
-    alert('Thanks!');
+    const queryParameters = this.candidateService.getQueryParameter(this.filterForm.value);
+    this.candidateService.getCandidates(queryParameters).subscribe(
+      candidates => this.candidates = candidates);
   }
 
   appendInputFilter(type: String) {

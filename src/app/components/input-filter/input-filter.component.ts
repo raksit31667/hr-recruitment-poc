@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'input-filter',
@@ -69,6 +70,7 @@ export class InputFilterComponent implements OnInit {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
+  @Input() filterForm: FormGroup;
   @Input() type: String;
 
   constructor() {}

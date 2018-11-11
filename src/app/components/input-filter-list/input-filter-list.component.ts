@@ -14,9 +14,9 @@ export class InputFilterListComponent {
   inputFilterListPlaceholder: InputFilterListPlaceholderDirective;
 
   filterForm = this.formBuilder.group({
-    company: null,
-    state: null,
-    postalCode: null,
+    firstName: null,
+    lastName: null,
+    candidateStatus: null,
   });
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver, private formBuilder: FormBuilder) {}
@@ -29,6 +29,7 @@ export class InputFilterListComponent {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(InputFilterComponent);
     const viewContainerRef = this.inputFilterListPlaceholder.viewContainerRef;
     const componentRef = viewContainerRef.createComponent(componentFactory);
+    componentRef.instance.filterForm = this.filterForm;
     componentRef.instance.type = type;
   }
 }

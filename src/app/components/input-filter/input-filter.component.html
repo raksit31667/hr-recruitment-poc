@@ -1,23 +1,23 @@
   <div *ngIf="type === 'firstName'" class="row">
     <div class="col">
-      <mat-form-field class="full-width">
-        <input matInput placeholder="First Name">
+      <mat-form-field [formGroup]="filterForm" class="full-width">
+        <input matInput placeholder="First Name" formControlName="firstName">
       </mat-form-field>
     </div>
   </div>
 
   <div *ngIf="type === 'lastName'" class="row">
       <div class="col">
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Last Name">
+        <mat-form-field [formGroup]="filterForm" class="full-width">
+          <input matInput placeholder="Last Name" formControlName="lastName">
         </mat-form-field>
       </div>
     </div>
 
   <div *ngIf="type === 'candidateStatus'" class="row">
     <div class="col">
-      <mat-form-field class="full-width">
-        <mat-select placeholder="Candidate Status">
+      <mat-form-field [formGroup]="filterForm" class="full-width">
+        <mat-select placeholder="Candidate Status" formControlName="candidateStatus">
           <mat-option *ngFor="let state of states" [value]="state.abbreviation">
             {{ state.name }}
           </mat-option>

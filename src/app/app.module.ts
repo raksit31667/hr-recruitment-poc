@@ -12,6 +12,8 @@ import { InputFilterComponent } from './components/input-filter/input-filter.com
 import { InputFilterListComponent } from './components/input-filter-list/input-filter-list.component';
 
 import { InputFilterListPlaceholderDirective } from './components/input-filter-list/input-filter-list-placeholder.directive';
+import { TableCandidatesComponent } from './components/table-candidates/table-candidates.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { InputFilterListPlaceholderDirective } from './components/input-filter-l
     InputFilterComponent,
     InputFilterListComponent,
     InputFilterListPlaceholderDirective,
+    TableCandidatesComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,13 @@ import { InputFilterListPlaceholderDirective } from './components/input-filter-l
 
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+
+    MatTableModule,
+
+    MatPaginatorModule,
+
+    MatSortModule
   ],
   providers: [],
   entryComponents: [ InputFilterComponent ],

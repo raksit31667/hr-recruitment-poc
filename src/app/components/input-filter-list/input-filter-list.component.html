@@ -12,4 +12,4 @@
   </mat-card>
 </form>
 
-{{ candidates | json }}
+<table-candidates *ngIf="candidates.length > 0" [candidates]="candidates"></table-candidates>

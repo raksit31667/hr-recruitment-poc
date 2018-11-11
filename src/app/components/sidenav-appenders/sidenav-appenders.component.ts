@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'sidenav-appenders',
@@ -9,7 +9,7 @@ export class SidenavAppendersComponent implements OnInit {
 
   @ViewChild('inputFilterList') inputFilterList;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor() { }
 
   ngOnInit() {
   }

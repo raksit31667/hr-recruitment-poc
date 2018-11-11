@@ -21,7 +21,7 @@ export class InputFilterListComponent {
     candidateStatus: null,
   });
 
-  candidates: Candidate[];
+  candidates: Candidate[] = [];
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver,
     private formBuilder: FormBuilder,

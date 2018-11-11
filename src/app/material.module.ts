@@ -6,7 +6,10 @@ import {
   MatIconModule,
   MatSidenavModule,
   MatInputModule,
-  MatSelectModule } from '@angular/material';
+  MatSelectModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTableModule } from '@angular/material';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -19,6 +22,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSidenavModule,
     MatInputModule,
     MatSelectModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule,
     ReactiveFormsModule
   ],
   declarations: []

@@ -69,6 +69,8 @@ export class InputFilterComponent implements OnInit {
     {name: 'Wyoming', abbreviation: 'WY'}
   ];
 
+  @Input() type: String;
+
   constructor() {}
 
   ngOnInit() {}

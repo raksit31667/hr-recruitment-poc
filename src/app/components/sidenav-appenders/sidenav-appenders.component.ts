@@ -14,7 +14,7 @@ export class SidenavAppendersComponent implements OnInit {
   ngOnInit() {
   }
 
-  onAppendInputFilter() {
-    this.inputFilterList.appendInputFilter();
+  onAppendInputFilter(type: String) {
+    this.inputFilterList.appendInputFilter(type);
   }
 }

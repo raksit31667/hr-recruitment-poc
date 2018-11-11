@@ -25,9 +25,10 @@ export class InputFilterListComponent {
     alert('Thanks!');
   }
 
-  appendInputFilter() {
+  appendInputFilter(type: String) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(InputFilterComponent);
     const viewContainerRef = this.inputFilterListPlaceholder.viewContainerRef;
-    viewContainerRef.createComponent(componentFactory);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    componentRef.instance.type = type;
   }
 }

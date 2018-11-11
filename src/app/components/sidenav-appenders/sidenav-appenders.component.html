@@ -1,9 +1,9 @@
 <mat-sidenav-container class="sidenav">
   <mat-sidenav mode="side" opened>
     <h2>Filter by</h2>
-    <field-appender (append)="onAppendInputFilter()"></field-appender>
-    <field-appender (append)="onAppendInputFilter()"></field-appender>
-    <field-appender (append)="onAppendInputFilter()"></field-appender>
+    <field-appender (append)="onAppendInputFilter('firstName')"></field-appender>
+    <field-appender (append)="onAppendInputFilter('lastName')"></field-appender>
+    <field-appender (append)="onAppendInputFilter('candidateStatus')"></field-appender>
     <field-appender (append)="onAppendInputFilter()"></field-appender>
   </mat-sidenav>
   <mat-sidenav-content>

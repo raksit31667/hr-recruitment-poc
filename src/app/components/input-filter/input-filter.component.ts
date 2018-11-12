@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { CandidateStatus } from 'src/app/models/candidate-status';
-import { University } from 'src/app/models/university';
+import { CandidateStatus } from '../../models/candidate-status';
+import { University } from '../../models/university';
 
 @Component({
   selector: 'input-filter',

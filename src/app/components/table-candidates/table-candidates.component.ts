@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewChild, Input, OnChanges } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
-import * as moment from 'moment';
 import { TableCandidatesDataSource } from './table-candidates-datasource';
-import { Candidate } from 'src/app/models/candidate';
+import { Candidate } from '../../models/candidate';
 
 @Component({
   selector: 'table-candidates',

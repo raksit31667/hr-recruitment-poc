@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, Input, OnChanges } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
+import * as moment from 'moment';
 import { TableCandidatesDataSource } from './table-candidates-datasource';
 import { Candidate } from 'src/app/models/candidate';
 
@@ -15,7 +16,7 @@ export class TableCandidatesComponent implements OnInit, OnChanges {
   dataSource: TableCandidatesDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['firstName', 'lastName', 'candidateStatus'];
+  displayedColumns = ['firstName', 'lastName', 'candidateStatus', 'university', 'shortlistDate'];
 
   ngOnInit() {
     this.initDataTable();

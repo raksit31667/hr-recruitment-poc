@@ -3,6 +3,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { CandidateService } from './candidate.service';
 import { Candidate } from '../models/candidate';
 import { CandidateStatus } from '../models/candidate-status';
+import { University } from '../models/university';
+import * as moment from 'moment';
 
 describe('CandidateService', () => {
 
@@ -35,12 +37,14 @@ describe('CandidateService', () => {
       const filterFormValue = {
         firstName: 'John',
         lastName: 'Doe',
-        candidateStatus: null
+        candidateStatus: null,
+        university: null,
+        shortlistDate: moment('01-31-2018')
       };
 
       const requestUrl = service.getQueryParameter(filterFormValue);
 
-      expect(requestUrl).toEqual('?firstName=John&lastName=Doe');
+      expect(requestUrl).toEqual('?firstName=John&lastName=Doe&shortlistDate=01-31-2018');
     });
   });
 
@@ -48,9 +52,27 @@ describe('CandidateService', () => {
     it('should return list of candidates correctly', () => {
 
       const mockCandidates: Candidate[] = [
-        { firstName: 'John', lastName: 'Doe', candidateStatus: CandidateStatus.NOT_PASS },
-        { firstName: 'Mike', lastName: 'Doe', candidateStatus: CandidateStatus.PENDING_DOCUMENT },
-        { firstName: 'John', lastName: 'Doraemon', candidateStatus: CandidateStatus.NOT_PASS },
+        {
+          firstName: 'John',
+          lastName: 'Doe',
+          candidateStatus: CandidateStatus.NOT_PASS,
+          university: University.CU,
+          shortlistDate: '01-31-2018'
+        },
+        {
+          firstName: 'Mike',
+          lastName: 'Doe',
+          candidateStatus: CandidateStatus.PENDING_DOCUMENT,
+          university: University.CU,
+          shortlistDate: '01-31-2018'
+        },
+        {
+          firstName: 'John',
+          lastName: 'Doraemon',
+          candidateStatus: CandidateStatus.NOT_PASS,
+          university: University.CU,
+          shortlistDate: '02-09-2018'
+        },
       ];
 
       service.getCandidates('?lastName=Doe').subscribe(candidates => {

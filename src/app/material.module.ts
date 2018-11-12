@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import {
   MatCardModule,
   MatButtonModule,
@@ -8,10 +9,10 @@ import {
   MatInputModule,
   MatSelectModule,
   MatDatepickerModule,
-  MatNativeDateModule,
   MatPaginatorModule,
   MatSortModule,
-  MatTableModule } from '@angular/material';
+  MatTableModule,
+  DateAdapter} from '@angular/material';
 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -25,12 +26,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule,
+    MatMomentDateModule,
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
     ReactiveFormsModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
+  ]
 })
 export class MaterialModule { }

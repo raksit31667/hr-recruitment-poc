@@ -39,7 +39,7 @@ describe('CandidateService', () => {
         lastName: 'Doe',
         candidateStatus: null,
         university: null,
-        shortlistDate: moment('01-31-2018')
+        shortlistDate: moment('01-31-2018', 'MM-DD-YYYY')
       };
 
       const requestUrl = service.getQueryParameter(filterFormValue);

@@ -4,6 +4,7 @@ import { MaterialModule } from '../../material.module';
 import { SidenavAppendersComponent } from './sidenav-appenders.component';
 import { FieldAppenderComponent } from '../field-appender/field-appender.component';
 import { InputFilterListComponent } from '../input-filter-list/input-filter-list.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('SidenavAppendersComponent', () => {
   let component: SidenavAppendersComponent;
@@ -15,7 +16,8 @@ describe('SidenavAppendersComponent', () => {
       declarations: [
         SidenavAppendersComponent,
         FieldAppenderComponent,
-        InputFilterListComponent ]
+        InputFilterListComponent ],
+        schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));

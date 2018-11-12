@@ -18,6 +18,7 @@ describe('TableCandidatesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TableCandidatesComponent);
     component = fixture.componentInstance;
+    component.candidates = [];
     fixture.detectChanges();
   });
 

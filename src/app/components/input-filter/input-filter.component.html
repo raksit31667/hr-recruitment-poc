@@ -29,7 +29,7 @@
   <div *ngIf="type === 'university'" class="row">
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
-        <mat-select placeholder="Candidate Status" formControlName="university">
+        <mat-select placeholder="University" formControlName="university">
           <mat-option *ngFor="let university of universities" [value]="university">
             {{ university }}
           </mat-option>

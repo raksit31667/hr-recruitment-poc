@@ -14,4 +14,5 @@
   </mat-card>
 </form>
 
+<h3 *ngIf="candidates.length === 0">No results</h3>
 <table-candidates *ngIf="candidates.length > 0" [candidates]="candidates"></table-candidates>

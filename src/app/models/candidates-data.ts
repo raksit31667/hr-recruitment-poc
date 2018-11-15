@@ -71,14 +71,14 @@ export const CandidatesData: Candidate[] = [
     lastName: 'Catt',
     candidateStatus: CandidateStatus.PASSED_INTERVIEW,
     shortlistDate: '03-03-2017',
-    university: University.AU
+    university: University.MU
     },
     {
     firstName: 'Sam',
     lastName: 'Smith',
     candidateStatus: CandidateStatus.PASSED_INTERVIEW,
-    shortlistDate: '04-11-2018',
-    university: University.TU
+    shortlistDate: '03-03-2017',
+    university: University.MU
     },
     {
     firstName: 'Singto',

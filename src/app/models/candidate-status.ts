@@ -8,7 +8,7 @@ export enum CandidateStatus {
   NO_SHOW = 'Candidate no show',
   NOT_CONSIDERED = 'Function not considered',
   PASSED_INTERVIEW = 'Passed interview',
-  FAILED_INTERVIEW = 'Fail Interview',
+  FAILED_INTERVIEW = 'Failed Interview',
   ON_HOLD = 'On Hold',
   WITHDRAWN_AFTER_INTERVIEW = 'Withdrawn By Candidate (After Interview)',
   OFFER_IN_PROGRESS = 'Offer in progress',

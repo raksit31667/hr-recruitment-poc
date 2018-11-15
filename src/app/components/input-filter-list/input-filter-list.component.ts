@@ -1,10 +1,10 @@
 import { Component, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material';
 import { InputFilterComponent } from '../input-filter/input-filter.component';
 import { InputFilterListPlaceholderDirective } from './input-filter-list-placeholder.directive';
 import { CandidateService } from '../../services/candidate.service';
 import { Candidate } from '../../models/candidate';
+import { ExcelService } from 'src/app/services/excel.service';
 
 @Component({
   selector: 'input-filter-list',
@@ -28,12 +28,17 @@ export class InputFilterListComponent {
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver,
     private formBuilder: FormBuilder,
-    private candidateService: CandidateService) {}
+    private candidateService: CandidateService,
+    private excelService: ExcelService) {}
 
   onSubmit() {
     const queryParameters = this.candidateService.getQueryParameter(this.filterForm.value);
     this.candidateService.getCandidates(queryParameters).subscribe(
       candidates => this.candidates = candidates);
+  }
+
+  exportAsExcelFile() {
+    this.excelService.exportAsExcelFile(this.candidates, 'candidates');
   }
 
   appendInputFilter(type: String) {

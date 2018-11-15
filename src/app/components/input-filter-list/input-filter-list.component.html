@@ -7,7 +7,9 @@
       <ng-template inputFilterListPlaceholder></ng-template>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">Search</button>
+      <button mat-raised-button
+      *ngIf="candidates.length > 0" color="accent" (click)="exportAsExcelFile()">Export</button>
     </mat-card-actions>
   </mat-card>
 </form>

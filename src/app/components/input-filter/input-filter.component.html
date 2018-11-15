@@ -2,6 +2,9 @@
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
         <input matInput placeholder="First Name" formControlName="firstName">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="onClickRemove()">
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>
@@ -10,6 +13,9 @@
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
         <input matInput placeholder="Last Name" formControlName="lastName">
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="onClickRemove()">
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>
@@ -23,6 +29,9 @@
             {{ status }}
           </mat-option>
         </mat-select>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="onClickRemove()">
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>
@@ -36,6 +45,9 @@
             {{ university }}
           </mat-option>
         </mat-select>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="onClickRemove()">
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>
@@ -46,6 +58,9 @@
         <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="shortlistDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="onClickRemove()">
+          <mat-icon>close</mat-icon>
+        </button>
       </mat-form-field>
     </div>
   </div>

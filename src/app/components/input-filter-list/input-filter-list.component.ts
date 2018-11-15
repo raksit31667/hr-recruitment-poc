@@ -41,11 +41,16 @@ export class InputFilterListComponent {
     this.excelService.exportAsExcelFile(this.candidates, 'candidates');
   }
 
-  appendInputFilter(type: String) {
+  appendInputFilter(type: string) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(InputFilterComponent);
     const viewContainerRef = this.inputFilterListPlaceholder.viewContainerRef;
     const componentRef = viewContainerRef.createComponent(componentFactory);
     componentRef.instance.filterForm = this.filterForm;
     componentRef.instance.type = type;
+    componentRef.instance.remove.subscribe(() => {
+
+      this.filterForm.patchValue({[type] : null });
+      componentRef.destroy();
+    });
   }
 }

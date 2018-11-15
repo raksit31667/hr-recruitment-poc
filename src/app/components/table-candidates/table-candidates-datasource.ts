@@ -11,7 +11,7 @@ import { Candidate } from '../../models/candidate';
  */
 export class TableCandidatesDataSource extends DataSource<Candidate> {
 
-  constructor(private paginator: MatPaginator, private sort: MatSort, private candidates: Candidate[]) {
+  constructor(private paginator: MatPaginator, private sort: MatSort, public candidates: Candidate[]) {
     super();
   }
 

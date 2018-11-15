@@ -18,6 +18,7 @@
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
         <mat-select placeholder="Candidate Status" formControlName="candidateStatus">
+          <mat-option>--Select Candidate Status--</mat-option>
           <mat-option *ngFor="let status of candidateStatuses" [value]="status">
             {{ status }}
           </mat-option>
@@ -30,6 +31,7 @@
     <div class="col">
       <mat-form-field [formGroup]="filterForm" class="full-width">
         <mat-select placeholder="University" formControlName="university">
+          <mat-option>--Select University--</mat-option>
           <mat-option *ngFor="let university of universities" [value]="university">
             {{ university }}
           </mat-option>

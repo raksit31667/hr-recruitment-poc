@@ -1,27 +1,27 @@
 # HR Recruiting Process Improvement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
+EMIT Bootcamp 2018 Demo Day (16th November 2018) Proof of Concept powered by Angular 6 + Angular Material
 
-## Development server
+## Demo :rocket:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<a href="https://raksit31667.github.io/hr-recruitment-poc/">LIVE DEMO</a>
 
-## Code scaffolding
+## Today I learned :mag:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- <a href="https://cli.angular.io/">Angular CLI usage</a>
+- <a href="https://angular.io/guide/reactive-forms">Angular Reactive Forms</a>
+- <a href="https://angular.io/guide/component-interaction">Angular Component Interaction</a>
+- <a href="https://angular.io/guide/testing/">Angular Unit Testing</a>
+- <a href="https://material.angular.io/">Angular Material integration</a>
+- <a href="https://blog.angular.io/taking-advantage-of-the-angular-material-datepicker-237e80fa14b3oc/">Angular Material date converter to Moment object</a>
+- <a href="https://angular.io/guide/dynamic-component-loader">Playing with Dynamic Component</a>
+- <a href="https://github.com/angular/in-memory-web-api">In-memory web API service</a>
+- <a href="https://medium.com/@madhavmahesh/exporting-an-excel-file-in-angular-927756ac9857">Export to Excel using FileSaver + XLSX</a>
 
-## Build
+## Achievement :camera_flash:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+EMIT Bootcamp 2018 - Never Give Up Reward
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## TODO :recycle:
+- Improve User Interface
+- Add Continuous Integrations

@@ -31,7 +31,7 @@
     "moment": "^2.22.2",
     "rxjs": "^6.0.0",
     "web-animations-js": "^2.3.2",
-    "xlsx": "^0.14.1",
+    "xlsx": "^0.15.5",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
